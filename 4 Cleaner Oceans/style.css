@@ -69,17 +69,7 @@ Almost Black: #0d1f2d
 					flex: 1;
 	
 	}
-	.nav {			
-					display:flex;
-					flex-direction:row;
-					justify-content: center;
-					margin:0 auto;
-					margin-top: 25px;
-					padding: 10px;
-	}
-	.nav div a{
-					padding: 10px;
-	}
+	
 
 	div a.active {
 					background-color: #1c7bc0;
@@ -135,18 +125,6 @@ Almost Black: #0d1f2d
 	.logo{			
 					margin: 0 auto;
 					float:none;
-	}
-	.nav{
-					margin-top: 10px;
-					text-align:center;
-					width: 100%;
-					flex-direction: column;
-
-	}
-
-	.nav div {
-					padding: 10px;
-					width:100%;
 	}
 
 	.hometext{
