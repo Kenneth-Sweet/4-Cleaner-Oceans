@@ -21,7 +21,7 @@ Almost Black: #0d1f2d
 	}
 
 	body{
-					background-image: url(Imgs/ocean-cleanup.jpg);
+					background-image: url(Imgs/ocean2.jpg);
 					background-repeat: no-repeat;
 					background-size: cover;
 					background-attachment:fixed;
@@ -96,17 +96,9 @@ Almost Black: #0d1f2d
 
 /* HomePage Styling */
 
-	.hometext{
-					display:flex;
-					flex-direction:column;
-					margin-top: 30px;
-					text-align:center;
-					font-size: 1.5em;
-					font-style: bold;
-					text-shadow: -3px 3px 0 grey;
-					color: #eaebed;
-					width:100%;
-					padding-bottom: 175px;
+	.jumbotron{
+					background-color:;
+					opacity: .6;
 	}
 
 /* About Page Styling */
