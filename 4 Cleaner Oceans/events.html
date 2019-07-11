@@ -14,37 +14,56 @@
 </head>
 <body>
 
-		<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-	      			</button>
-					<a href="#" class="navbar-brand">4 Cleaner Oceans</a>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="get-involved.html">Get Involved</a></li>
-						<li class="active"><a href="events.html">Events</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="my-account.html">Login</a></li>
-						<li><a href="#">Sign Up</a></li>
-					</ul>
-				</div>
+	<!-- Navigation -->
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+      			</button>
+				<a href="#" class="navbar-brand">4 Cleaner Oceans</a>
 			</div>
-		</nav>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="get-involved.html">Get Involved</a></li>
+					<li><a href="events.html">Events</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="signup.html">Sign Up</a></li>
+					<li class="dropdown">
+          				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
+          				<ul class="dropdown-menu">
+          					<form class="loginform">
+	            				<li class="form-group">
+	            					<label for="inputEmail">Email address</label>
+	            					<input type="email" class="form-control" id="inputEmail" placeholder="Email" autofocus required>
+	            				</li>
+	            				<li class="form-group">
+									<label for="inputPassword1">Password</label>
+									<input type="password" class="form-control" id="inputPassword1" placeholder="Password" required>
+									</li>
+	            				<button type="submit" class="btn btn-default">Submit</button>
+            				</form>
+            			</ul>
+            		</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	
+	<!-- Page Body -->
+
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Upcoming Events</h1>
 		</div>
-	<div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-sm-6">
@@ -53,44 +72,126 @@
 						<div class="thumbnail"><img src="Imgs/jekyll.jpg" alt="photo of Jekyll Island">
 						</div>
 					</li>
-					<li class="list-group-item">Jekyll Island</li>
-					<li class="list-group-item">August 1, 2019 - 7:00 am</li>
+					<li class="list-group-item center-text">Jekyll Island</li>
+					<li class="list-group-item center-text">August 1, 2019 - 7:00 am</li>
 				</ul>
 			</div>
 			<div class="col-lg-4 col-sm-6">
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item">
-						<div class="thumbnail"><img src="Imgs/jekyll.jpg" alt="photo of Jekyll Island">
+						<div class="thumbnail"><img src="Imgs/turtle3.png" alt="photo of turtle swimming">
 						</div>
 					</li>
-					<li class="list-group-item">Jekyll Island</li>
-					<li class="list-group-item">August 1, 2019 - 7:00 am</li>
+					<li class="list-group-item center-text">Tybee Island</li>
+					<li class="list-group-item center-text">August 5, 2019 - 9:00 am</li>
 				</ul>
 			</div>
 			<div class="col-lg-4 col-sm-6">
 				<ul class="list-group list-group-flush">
 					<li class="list-group-item">
-						<div class="thumbnail"><img src="Imgs/jekyll.jpg" alt="photo of Jekyll Island">
+						<div class="thumbnail"><img src="Imgs/plastic-bottles.jpg" alt="photo of collected plastic bottles">
 						</div>
 					</li>
-					<li class="list-group-item">Jekyll Island</li>
-					<li class="list-group-item">August 1, 2019 - 7:00 am</li>
+					<li class="list-group-item center-text">Myrtle Beach</li>
+					<li class="list-group-item center-text">August 8, 2019 - 4:00 pm</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/dolphin.jpg" alt="photo of dolphin">
+						</div>
+					</li>
+					<li class="list-group-item center-text">St. Simons Island</li>
+					<li class="list-group-item center-text">August 11, 2019 - 6:00 am</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/beach-cleanup.jpg" alt="photo of person cleaning beach">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Driftwood Beach</li>
+					<li class="list-group-item center-text">August 15, 2019 - 2:00 pm</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/trash-on-beach.jpg" alt="photo of collected plastic bottles">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Gould's Inlet</li>
+					<li class="list-group-item center-text">August 18, 2019 - 8:00am</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/ocean-cleanup.jpg" alt="photo of man diving for trash in ocean">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Garden City Beach</li>
+					<li class="list-group-item center-text">August 19, 2019 - 7:00 am</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/family-on-beach.jpg" alt="photo of family on beach">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Glory Beach</li>
+					<li class="list-group-item center-text">August 23, 2019 - 9:00 am</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/myrtle.jpg" alt="photo of myrtle beach">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Myrtle Beach</li>
+					<li class="list-group-item center-text">August 29, 2019 - 4:00 pm</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/net-of-bottles.jpg" alt="photo of collected plastic">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Jekyll Island</li>
+					<li class="list-group-item center-text">September 3, 2019 - 6:00 am</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/volunteers.jpg" alt="photo of volunteer group">
+						</div>
+					</li>
+					<li class="list-group-item center-text">Folly Beach</li>
+					<li class="list-group-item center-text">September 6, 2019 - 2:00 pm</li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item">
+						<div class="thumbnail"><img src="Imgs/turtle1.jpg" alt="photo of turtle swimming">
+						</div>
+					</li>
+					<li class="list-group-item center-text">St. Andrews Beach</li>
+					<li class="list-group-item center-text">September 10, 2019 - 8:00am</li>
 				</ul>
 			</div>
 
 		
 			</div>
 		
-
-		</div>
-
-
-
-			
-		</div>
 
 	</div>
-
 		
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   		crossorigin="anonymous"></script>

@@ -9,7 +9,6 @@ Muted Turquoise: #006989
 Light Grey-Blue: #a3bac3
 Almost Black: #0d1f2d
 
-
 */
 
 
@@ -26,6 +25,7 @@ Almost Black: #0d1f2d
 					background-size: cover;
 					background-attachment:fixed;
 					font-family: 'Raleway', sans-serif;
+					font-size: 18px;
 	}
 
 	h1, h2{
@@ -49,6 +49,16 @@ Almost Black: #0d1f2d
 					background-color:#a3bac3;
 	}
 
+	.loginform{
+					min-width: 275px;
+					padding: 20px;
+	}
+
+/* all pages with additional text */
+	.pagetext {
+
+	}
+
 /* HomePage Styling */
 
 	.jumbotron{
@@ -70,13 +80,14 @@ Almost Black: #0d1f2d
 
 /* Event Page Styling */
 
-
 .list-group-item{
+					max-height: 200px;
+					overflow:hide;
 					background-color: #eaebed;
 					opacity:.8;
 }
 
-.list-group-item:hover {
+a.thumbnail:hover {
 					opacity: 1;
 }
 
