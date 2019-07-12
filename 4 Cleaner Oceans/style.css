@@ -41,12 +41,15 @@ Almost Black: #0d1f2d
 /* all pages - navbar */
 	body > .navbar {
 					background-color: #eaebed;
-	
+	}
+	.navbar-default .navbar-nav > li > a {
+		color: #006989;
 	}
 	.navbar-default .navbar-nav > .active > a,
 	.navbar-default .navbar-nav > .active > a:hover, 
 	.navbar-default .navbar-nav > .active > a:focus {
 					background-color:#a3bac3;
+					color: #eaebed;
 	}
 
 	.loginform{
@@ -54,29 +57,56 @@ Almost Black: #0d1f2d
 					padding: 20px;
 	}
 
-/* all pages with additional text */
-	.pagetext {
-
+	label {
+					font-weight:normal;
 	}
 
-/* HomePage Styling */
-
-	.jumbotron{
+/* all pages text and footer */
+	div.jumbotron{
 					background-color: #eaebed;
 					opacity: .6;
 					color: #006989;
 	}
 
-/* About Page Styling */
-	#about-text {
-					width: 80%;
-					text-align: center;
-					margin:0 auto;
-					padding-bottom: 40px;
+	footer {
+					background-color:#eaebed;
+					width:100%;
+					bottom:0;
+					padding-top: 10px;
+	}
+	hr {
+					border: .5px #006989 solid;
 	}
 
+	.footer-img {
+					width: 60%;
+					background-color:#eaebed;
+					margin: 10px;
+	}
 
+	.footer-list {
+					list-style-type:none;
+					color:#006989;
+	}
+	.contact-row {
+					background-color:#eaebed;
+					color:#006989;
+	}
+
+/* About Page Styling */
+
+
+
+/*Get Involved Page Styling*/
+#fundly-widget {
+					padding: 15px;
 }
+iframe {
+					border:none;
+					width:100%;
+					height:510px;
+}
+
 
 /* Event Page Styling */
 
@@ -91,6 +121,11 @@ a.thumbnail:hover {
 					opacity: 1;
 }
 
+
+/* Sign up Form Styling */
+#sign-up-form	{
+					opacity:.8;
+}
 
 
 @media only screen and (max-width:850px){
