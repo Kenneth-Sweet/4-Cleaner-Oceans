@@ -93,13 +93,26 @@ Almost Black: #0d1f2d
 					color:#006989;
 	}
 
+
+/* padding before footer */
+.home-img, .about-img, .gi-img {
+					padding-bottom:50px;
+}
+
+
+
 /* Home Page Styling */
-.home-image {
+.home-img {
 					max-width:100%;
 					height: auto;
 					margin:0 auto;
 }
 /* About Page Styling */
+.about-img {
+					max-width:100%;
+					height:auto;
+}
+
 
 
 
@@ -115,9 +128,8 @@ iframe {
 					padding-bottom:15px;
 }
 
-.gi-photo{
+.gi-img{
 					max-width:100%;
-					padding-bottom: 15px;
 }
 #reduce-link {
 					font-size: 1.1em;
@@ -163,28 +175,44 @@ iframe {
 					border:2px solid white;
 					border-bottom:3px solid white;
 }
+table {
+					margin:25px;
+					width:60%;
+}
+td{
+					vertical-align:top;
+					padding-bottom: 12px;
+}
+.faqlink{
+					text-align:right;
+					width:100%;
+}
 
 
 /* Sign up Form Styling */
 #sign-up-form	{
 					opacity:.8;
 					padding: 75px;
+					width:80%;
+					margin:0 auto;
+					margin-bottom: 50px;
 }
 
 
 
 @media only screen and (max-width:850px){
 
-	.logo{			
-					margin: 0 auto;
-					float:none;
+	/* makes event titles show on mobile devices that can't hover */
+	.event-text {
+					opacity:0.6;
 	}
 
-	.hometext{
-					margin-top: 5px;
+	table {			width: 100%;
 	}
 
-
+	#sign-up-form {
+					width: 100%;
+	}
 				
 
 }

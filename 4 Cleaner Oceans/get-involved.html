@@ -4,7 +4,6 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
-	<script src = "main.js"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" href="style.css" media="all">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap" rel="stylesheet">
@@ -35,22 +34,27 @@
 					<li><a href="events.html">Events</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="sign-up.html">Sign Up</a></li>
-					<li class="dropdown">
+					<li class="logged-out">
+						<a href="sign-up.html">Sign Up</a>
+					</li>
+					<li class="dropdown logged-out">
           				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           				<ul class="dropdown-menu">
           					<form class="loginform">
 	            				<li class="form-group">
-	            					<label for="inputEmail">Email address</label>
-	            					<input type="email" class="form-control" id="inputEmail" placeholder="Email" autofocus required>
+	            					<label for="loginEmail">Email address</label>
+	            					<input type="email" class="form-control" id="loginEmail" placeholder="Email" autofocus required>
 	            				</li>
 	            				<li class="form-group">
-									<label for="inputPassword1">Password</label>
-									<input type="password" class="form-control" id="inputPassword1" placeholder="Password" required>
+									<label for="loginPassword">Password</label>
+									<input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
 								</li>
 	            				<button type="submit" class="btn btn-default">Submit</button>
             				</form>
             			</ul>
+            		</li>
+            		<li class="logged-in">
+            			<a href="#" id="logout">Logout</a>
             		</li>
 				</ul>
 			</div>
@@ -88,10 +92,10 @@
 	
 		<div class="row">
 			<div class="col-sm-6">
-				<img class="rounded img-fluid gi-photo" src="Imgs/recycling-bin.jpg" alt="photo of reclycing bin">
+				<img class="rounded img-fluid gi-img" src="Imgs/recycling-bin.jpg" alt="photo of reclycing bin">
 			</div>
 			<div class="col-sm-6">
-				<img class="rounded img-fluid gi-photo" src="Imgs/reduce-reuse-recycle.jpg" alt="photo of reclycing bin">
+				<img class="rounded img-fluid gi-img" src="Imgs/reduce-reuse-recycle.jpg" alt="photo of reclycing bin">
 			</div>
 		</div>
 	</div>
@@ -114,7 +118,7 @@
 				<ul class="footer-list">
 					<li><a href="events.html">Events</a></li>
 					<li><a href="sign-up.html">Sign Up</a></li>
-					<li><a href=""></a></li>
+					<li><a href="edetails.html#volInfo">Volunteer FAQs</a></li>
 				</ul>
 			</div>
 		</div>
@@ -130,6 +134,31 @@
 	</div>
 </footer>
 
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyAsE3HMkYY3Zs5rl9h7hAewcw0QKCCDV6E",
+	    authDomain: "account-4co.firebaseapp.com",
+	    databaseURL: "https://account-4co.firebaseio.com",
+	    projectId: "account-4co",
+	    appId: "1:619002437267:web:17162aa16fd73c38"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+
+	  //make auth and firestore references
+	  const auth = firebase.auth();
+	  const db = firebase.firestore();
+
+	</script>
+
+	<script src="index.js"></script>
+	<script src="auth.js"></script>
 	
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   		crossorigin="anonymous"></script>
