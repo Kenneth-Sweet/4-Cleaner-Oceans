@@ -1,3 +1,8 @@
+//get event detail records from database
+db.collection('events').get().then(snapshot => {
+	getEvents(snapshot.docs);
+});
+
 
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
