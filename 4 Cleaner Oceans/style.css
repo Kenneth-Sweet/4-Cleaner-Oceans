@@ -41,6 +41,10 @@ Almost Black: #0d1f2d
 /* all pages - navbar */
 	body > .navbar {
 					background-color: #eaebed;
+					position:fixed;
+					top:0;
+					width:100%;
+					z-index:99;
 	}
 	.navbar-default .navbar-nav > li > a {
 		color: #006989;
@@ -52,8 +56,17 @@ Almost Black: #0d1f2d
 					color: #eaebed;
 	}
 
+/* THIS IS SUPPOSED TO get rid of the delay when the page loads and you can breifly see all three buttons, but it doesnt */
+	.logged-out, .logged-in {
+					display:none;
+	}
+
 	.loginform{
 					min-width: 275px;
+					padding: 20px;
+	}
+	.signupform{
+					min-width: 500px;
 					padding: 20px;
 	}
 
@@ -76,6 +89,11 @@ Almost Black: #0d1f2d
 	}
 	hr {
 					border: .5px #006989 solid;
+	}
+
+	#aboutus, #get-involved, #events {
+					border: 2px #006989 solid;
+					margin-bottom:100px;
 	}
 
 	.footer-img {
@@ -106,6 +124,10 @@ Almost Black: #0d1f2d
 					max-width:100%;
 					height: auto;
 					margin:0 auto;
+}
+
+#first {
+					padding-top:100px;
 }
 /* About Page Styling */
 .about-img {
@@ -190,13 +212,13 @@ td{
 
 
 /* Sign up Form Styling */
-#sign-up-form	{
+/*#sign-up-form	{
 					opacity:.8;
 					padding: 75px;
 					width:80%;
 					margin:0 auto;
 					margin-bottom: 50px;
-}
+}*/
 
 
 
