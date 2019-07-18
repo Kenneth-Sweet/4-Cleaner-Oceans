@@ -1,3 +1,16 @@
+
+//add admin cloud function
+const adminForm = document.querySelector('.adminForm')
+adminForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const adminEmail = document.querySelector('#inputAdminEmail').value;
+	const addAdminRole = functions.httpsCallable('addAdminRole');
+	addAdminRole({ email: adminEmail }).then(result => {
+		console.log(result);
+		adminForm.reset();
+		$('#adminModal').modal('hide');
+	})
+})
 //get event detail records from database
 db.collection('events').get().then(snapshot => {
 	getEvents(snapshot.docs);
@@ -7,8 +20,12 @@ db.collection('events').get().then(snapshot => {
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
 	if (user) {
+		user.getIdTokenResult().then(idTokenResult => {
+			user.admin = idTokenResult.claims.admin;
+			setupUI(user);
+		})
 		console.log("user logged in: ", user);
-		setupUI(user);
+		
 	} else {
 		console.log("user logged out");
 		setupUI();
@@ -30,7 +47,8 @@ signupForm.addEventListener("submit", (e)=>{
 	auth.createUserWithEmailAndPassword(email, password).then(cred => {
 		return db.collection('users').doc(cred.user.uid).set({
 			firstName: signupForm["inputFirstName"].value,
-			lastName: signupForm["inputLastName"].value
+			lastName: signupForm["inputLastName"].value,
+			email: signupForm["inputEmail"].value
 			});	
 		}).then(() => {
 			signupForm.reset();
@@ -63,6 +81,8 @@ eventForm.addEventListener("submit", (e)=>{
 		time: eventForm.time.value,
 		
 	});
+		eventForm.reset();
+		$('#eventModal').modal('hide');
 });
 
 

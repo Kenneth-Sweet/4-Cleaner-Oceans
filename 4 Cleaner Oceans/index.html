@@ -86,6 +86,7 @@
             			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
             			<ul class="dropdown-menu">
             				<!-- ADD ACCOUNT DETAILS FROM DATABASE -->
+            				<h3 class="center-text">Logged in as:</h3>
             				<li class="accountDetails"></li>
             			</ul>
             		</li>
@@ -368,6 +369,32 @@
 </div>
 
 
+<!--Admin Modal-->
+<div class="modal fade" id="adminModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="padding:35px;">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4>Create a New Admin</h4>
+			</div>
+			<div class="modal-body" style="padding:45px;">
+				<form id="adminForm" class="adminForm">	
+				<ul style="list-style-type: none">				
+					<li class="form-group">
+					    <label for="inputAdminEmail">Email</label>
+					    <input type="email" class="form-control" name="adminEmail" id="inputAdminEmail" placeholder="Email@email.com" autofocus required>
+					</li>
+
+					<li class="col-md-6">
+						<button class="btn btn-default" id="submitAdminButton" type="submit">Grant Admin Privileges</button>
+					</li>
+				</ul>	
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 
@@ -380,33 +407,37 @@
 			<div class="col-sm-4 footer-logo-box center-text">
 				<img class="footer-img" src="Imgs/logo.png">
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<ul class="footer-list">
 					<li><a href="#first">Home</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#get-involved">Get Involved</a></li>	
 				</ul>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-3">
 				<ul class="footer-list">
 					<li><a href="#events">Events</a></li>
 					<li><a href="#volfaq">Volunteer FAQs</a></li>
-					<li><a href="http://eepurl.com/gxuJmf">Subscribe</a></li>
-					<li><a href="https://gmail.us3.list-manage.com/unsubscribe?u=2f38d6fd1c877315fc5724800&id=fe6854bbce">Unsubscribe</a></li>
+					<li><a href="http://eepurl.com/gxuJmf" target="_blank">Subscribe</a></li>
+					<li><a href="https://gmail.us3.list-manage.com/unsubscribe?u=2f38d6fd1c877315fc5724800&id=fe6854bbce" target="_blank">Unsubscribe</a></li>
 				</ul>
+			</div>
+			<div class="col-xs-1 admin" style="display: none;">
+				<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#eventModal">Create Event</button>
+			</div>
+			<div class="col-xs-1 admin" style="display: none;" >
+				<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#adminModal">Admin</button>
 			</div>
 		</div>
 		<hr>
 		<div class="row contact-row">
-			<div class="col-xs-11 center-text">
+			<div class="col-xs-12 center-text">
 				<p class="center-text">
 					Contact us at <a href="mailto:4cleaneroceans@gmail.com">4CleanerOceans@gmail.com</a> or by phone at <a href="tel:+15555555555">555-555-5555</a>
 				</p>
 
 			</div>
-			<div class="col-xs-1">
-				<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#eventModal">Admin</button>
-			</div>
+			
 		</div>
 	</div>
 </footer>
@@ -417,6 +448,8 @@
 	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-functions.js"></script>
+
 
 	<script>
 	  // Your web app's Firebase configuration
@@ -433,6 +466,7 @@
 	  //make auth and firestore references
 	  const auth = firebase.auth();
 	  const db = firebase.firestore();
+	  const functions = firebase.functions();
 	</script>
 
 <!-- CUSTOM JS FILES -->

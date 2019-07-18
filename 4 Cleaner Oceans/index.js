@@ -34,18 +34,26 @@ const getEvents = (data) => {
 // Conditional Menu Items
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
-const accountDetails = document.querySelector('.accountDetails')
+const accountDetails = document.querySelector('.accountDetails');
+const adminItems = document.querySelectorAll('.admin');
 
 const setupUI = (user) => {
 	if (user){
-
+		if(user.admin){
+			adminItems.forEach(item => item.style.display = 'block');
+		}
 		// account info
-		const html = `
-			<div>Logged in as ${user.firstName} ${user.lastName}<br>
-			${user.email}</div>`;
+		db.collection('users').doc(user.uid).get().then(doc => {
+			const html = `
+				<div>Name: ${doc.data().firstName} ${doc.data().lastName}</div>
+				<div>Email: ${user.email}</div>
+				<div class="admin-status">${user.admin ? 'Admin' : ''}</div>
+
+				`;
 
 		accountDetails.innerHTML = html;
-
+		})
+		
 		//toggle UI elements
 		loggedInLinks.forEach(item => item.style.display ='block');
 		loggedOutLinks.forEach(item => item.style.display ='none');
@@ -54,6 +62,7 @@ const setupUI = (user) => {
 
 		loggedInLinks.forEach(item => item.style.display ='none');
 		loggedOutLinks.forEach(item => item.style.display ='block');
+		adminItems.forEach(item => item.style.display = 'none');
 	}
 }
 

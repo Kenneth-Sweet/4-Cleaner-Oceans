@@ -64,6 +64,12 @@ Almost Black: #0d1f2d
 	.accountDetails{
 					min-width: 200px;
 					padding: 20px;
+					line-height: 2;
+					text-align:center;
+	}
+	.admin-status {
+					font-size:1.1em;
+					color: #006989;
 	}
 
 	.loginform{
