@@ -64,6 +64,7 @@ eventForm.addEventListener("submit", (e)=>{
 		location: eventForm.location.value,
 		supervisor: eventForm.supervisor.value,
 		time: eventForm.time.value,
+		
 	});
 });
 
