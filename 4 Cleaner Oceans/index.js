@@ -34,14 +34,24 @@ const getEvents = (data) => {
 // Conditional Menu Items
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
+const accountDetails = document.querySelector('.accountDetails')
 
 const setupUI = (user) => {
 	if (user){
+
+		// account info
+		const html = `
+			<div>Logged in as ${user.firstName} ${user.lastName}<br>
+			${user.email}</div>`;
+
+		accountDetails.innerHTML = html;
+
 		//toggle UI elements
 		loggedInLinks.forEach(item => item.style.display ='block');
 		loggedOutLinks.forEach(item => item.style.display ='none');
 	} 
 	else {
+
 		loggedInLinks.forEach(item => item.style.display ='none');
 		loggedOutLinks.forEach(item => item.style.display ='block');
 	}

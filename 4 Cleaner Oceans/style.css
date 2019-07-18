@@ -61,6 +61,11 @@ Almost Black: #0d1f2d
 					display:none;
 	}
 
+	.accountDetails{
+					min-width: 200px;
+					padding: 20px;
+	}
+
 	.loginform{
 					min-width: 275px;
 					padding: 20px;
