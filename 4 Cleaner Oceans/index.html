@@ -29,7 +29,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#first">Home</a></li>
+					<li><a href="#first">Home</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#get-involved">Get Involved</a></li>
 					<li><a href="#events">Events</a></li>
@@ -59,14 +59,7 @@
 										<label for="inputPassword">Create Password</label>
 										<input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
 									</li>
-								
-									<!-- <li class="checkbox">
-									 	<label>
-											<input type="checkbox" value="">
-												Subscribe me to the 4 Cleaner Oceans Newsletter
-									  </label>
-									</li> -->
-								
+			
 									<li class="col-md-6">
 										<button class="btn btn-default" id="submitButton" type="submit">Create Account</button>
 									</li>
@@ -89,12 +82,12 @@
             				</form>
             			</ul>
             		</li>
-            		<!-- <li class="dropdown logged-in">
+            		<li class="dropdown logged-in">
             			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
             			<ul class="accountDetails">
-            				
+            				<!-- ADD ACCOUNT DETAILS FROM DATABASE -->
             			</ul>
-            		</li> -->
+            		</li>
             		<li class="logged-in">
             			<a href="#" id="logout">Logout</a>
             		</li>
@@ -188,7 +181,7 @@
 				<ul>
 					<li><strong>Donate</strong> - our non-profit organization is completely reliant on donations from the community to keep our operation running.  100% of funds go towards cleanup efforts, recycling projects, supplies, advertising (so more people will join the cause!), and keeping our website and newletter current and running
 					</li>
-					<li><strong>Volunteer</strong> - your time is just as helpful as donating money.  We couldn't make any of this happen without our volunteers.  Because of people like YOU, we are able to keep thousands of gallons of plastic and waste out of our oceans and off of our local beaches</li>
+					<li><strong>Volunteer</strong> - your time is just as helpful as donating money.  We couldn't make any of this happen without our volunteers.  Because of people like YOU, we are able to keep thousands of gallons of plastic and waste out of our oceans and off of our local beaches.  <a href="#volfaq"><strong>Volunteer FAQ</strong></a></li>
 					<li><strong>Spread the word</strong> - tell your family, friends, neighbors, pets, and strangers you meet on the street about our organization!  Every person makes a difference!
 					</li>
 					<li><strong>Do your part</strong> - learn more <a href="https://www.oceanicsociety.org/blog/1720/7-ways-to-reduce-ocean-plastic-pollution-today" id="reduce-link" target="_blank"><strong>here</strong></a> about what you can do to lower your household's waste production.  Even if you aren't throwing your trash directly into the ocean on your family trip to the beach, chances are, it's making it into the ocean anyways.  Using resuable containers and straws whenever possible is a small choice you can make every day</li>
@@ -321,7 +314,57 @@
 		
 	</div>
 
-	
+
+<!-- Add Event Modal -->
+<div class="modal fade" id="eventModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="padding:35px;">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4>Create a New Event</h4>
+			</div>
+			<div class="modal-body" style="padding:45px;">
+				<form id="eventForm" class="eventForm">	
+				<ul style="list-style-type: none">				
+					<li class="form-group">
+					    <label for="inputEID">Event ID</label>
+					    <input type="text" class="form-control" name="eid" id="inputEID" placeholder="id is equal to date format '01012001'" autofocus required>
+					</li>
+
+					<li class="form-group">
+						<label for="inputDate">Event Date</label>
+						<input type="text" class="form-control" name="date" id="inputDate" placeholder="format January 1, 2001" required>
+					</li>
+
+					<li class="form-group">
+						<label for="inputCity">Event City</label>
+						<input type="text" class="form-control" name="city" id="inputCity" placeholder="City Name" required>
+					</li>
+
+					<li class="form-group">
+						<label for="inputLocation">Event Address</label>
+						<input type="text" class="form-control" name="location" id="inputLocation" placeholder="full address, separated with commas" required>
+					</li>
+
+					<li class="form-group">
+						<label for="inputSupervisor">On-Site Supervisor</label>
+						<input type="text" class="form-control" name="supervisor" id="inputSupervisor" placeholder="FirstName LastName" required>
+					</li>
+
+					<li class="form-group">
+						<label for="inputTime">Event Time</label>
+						<input type="text" class="form-control" name="time" id="inputTime" placeholder="format '7:00 am'" required>
+					</li>
+
+					<li class="col-md-6">
+						<button class="btn btn-default" id="submitButton" type="submit">Create Event</button>
+					</li>
+				</ul>	
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 
@@ -354,11 +397,14 @@
 		</div>
 		<hr>
 		<div class="row contact-row">
-			<div class="col-xs-12 center-text">
+			<div class="col-xs-11 center-text">
 				<p class="center-text">
 					Contact us at <a href="mailto:4cleaneroceans@gmail.com">4CleanerOceans@gmail.com</a> or by phone at <a href="tel:+15555555555">555-555-5555</a>
 				</p>
 
+			</div>
+			<div class="col-xs-1">
+				<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#eventModal">Admin</button>
 			</div>
 		</div>
 	</div>

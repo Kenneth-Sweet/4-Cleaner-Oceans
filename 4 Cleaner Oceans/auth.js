@@ -39,7 +39,32 @@ signupForm.addEventListener("submit", (e)=>{
 		"First Name": signupForm.firstname.value,
 		"Last Name": signupForm.lastname.value,
 		Email: signupForm.useremail.value
-	})
+	});
+});
+
+// new event form (from UI)
+const eventForm = document.querySelector("#eventForm");
+
+eventForm.addEventListener("submit", (e)=>{
+	e.preventDefault();
+
+	//get user info
+	const eid = eventForm["inputEID"].value;
+	const date = eventForm["inputDate"].value;
+	const city = eventForm["inputCity"].value;
+	const location = eventForm["inputLocation"].value;
+	const supervisor = eventForm["inputSupervisor"].value;
+	const time = eventForm["inputTime"].value;
+
+	//saves data to database
+	db.collection("events").add({
+		id: eventForm.eid.value,
+		date: eventForm.date.value,
+		city: eventForm.city.value,
+		location: eventForm.location.value,
+		supervisor: eventForm.supervisor.value,
+		time: eventForm.time.value,
+	});
 });
 
 
@@ -64,5 +89,8 @@ loginForm.addEventListener('submit', (e) => {
 		loginForm.reset();
 	});
 });
+
+
+
 
 
