@@ -11,8 +11,16 @@ adminForm.addEventListener('submit', (e) => {
 		$('#adminModal').modal('hide');
 	})
 })
+
+//get today's date to use to limit events to the future
+var today = new Date();
+var dd = String(today.getDate()).padStart(2,'0');
+var mm = String(today.getMonth()+1).padStart(2, '0');
+var yyyy = today.getFullYear();
+today = mm + dd + yyyy;
+
 //get event detail records from database
-db.collection('events').get().then(snapshot => {
+db.collection('events').where('id', '>=', today).get().then(snapshot => {
 	getEvents(snapshot.docs);
 });
 
